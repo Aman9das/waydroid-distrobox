@@ -1,0 +1,1 @@
+alias waydroid='/usr/bin/waydroid-wrapper'

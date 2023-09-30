@@ -1,5 +1,7 @@
 FROM ghcr.io/ublue-os/fedora-distrobox:latest AS waydroid-distrobox
 
+COPY system_files /
+
 # Install Waydroid & required packages
 RUN dnf install -y \
         waydroid \
@@ -8,6 +10,8 @@ RUN dnf install -y \
         iptables \
         dbus-x11 \
         kmod \
+        curl \
+        mutter \
         lzip
 
 # Cleanup
