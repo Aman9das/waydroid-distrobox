@@ -7,6 +7,7 @@ RUN dnf install -y \
         systemd-pam \
         iptables \
         dbus-x11 \
+        kmod \
         lzip
 
 # Cleanup
