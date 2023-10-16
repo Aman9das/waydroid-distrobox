@@ -1,1 +1,1 @@
-alias waydroid='/usr/bin/waydroid-wrapper'
+alias waydroid='/usr/bin/ewaydroid'
