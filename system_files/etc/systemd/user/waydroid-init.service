@@ -1,0 +1,10 @@
+[Unit]
+Description=Initialize the Waydroid container
+
+[Service]
+User=root
+WorkingDirectory=/root
+ExecStart=waydroid init
+
+[Install]
+WantedBy=multi-user.target
