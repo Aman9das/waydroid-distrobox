@@ -12,7 +12,17 @@ RUN dnf install -y \
         kmod \
         curl \
         mutter \
-        lzip
+        lzip \
+        cracklib-dicts
+
+# Setup Environment
+
+rm -rf /lib/modules
+ln -sf /run/host/lib/modules /lib/modules
+RUN chmod +x /usr/bin/ewaydroid
+RUN ln -s /etc/systemd/system/waydroid-init.service /etc/systemd/system/multi-user.target.wants/waydroid-init.service
+RUN ln -s /etc/systemd/system/waydroid-bg.service /etc/systemd/system/multi-user.target.wants/waydroid-bg.service
+
 
 # Cleanup
 RUN rm -rf /tmp/*
